@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blury_background"
+    android:theme="@style/NoActionBar"
+    tools:context=".Activity.Dashboard">
+
+    <!-- Dashboard Header -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:padding="20dp">
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:onClick="backprofile"
+            android:src="@drawable/back"
+            />
+
+        <!-- Dashboard Title -->
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:layout_marginStart="25dp"
+            android:layout_gravity="left"
+            android:text="Profile Settings"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/g_black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <!-- Logout Button -->
+
+
+    </LinearLayout>
+
+    <!-- Main Content Area -->
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- User Details Section -->
+        <TextView
+            android:id="@+id/userDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h3"
+            android:layout_gravity="left"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Update your Details"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <!-- User Profile Image -->
+        <TextView
+            android:id="@+id/updtemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Udupi, Manipal"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+
+        <!-- User Name -->
+        <EditText
+            android:id="@+id/updtname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="left"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Mayank Singh"
+            android:hint="Update your Name"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- User Address -->
+
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_background"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Update "
+            android:onClick="Updatenow"
+            android:textColor="@color/white" />
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_background"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginTop="20dp"
+            android:text="DELETE ACCOUNT "
+            android:onClick="Deletenow"
+            android:textColor="@color/g_red" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

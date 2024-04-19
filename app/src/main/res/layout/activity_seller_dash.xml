@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blury_background"
+    android:theme="@style/NoActionBar">
+
+    <!-- Dashboard Header -->
+
+    <!-- Main Content Area -->
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="40dp">
+
+        <!-- Dashboard Title -->
+
+        <!-- Logout Button -->
+        <TextView
+            android:id="@+id/dashboardTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="3dp"
+            android:text="Dashboard"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLoginAccountOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_background"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Logout"
+            android:onClick="logout1"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- User Details Section -->
+        <TextView
+            android:id="@+id/userDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Details"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- User Profile Image -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_kleine_shape"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/usernameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Mayank SIngh"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- User Address -->
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Udupi,Manipal"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+        <!-- Other Options Section -->
+        <TextView
+            android:id="@+id/trackdash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track Orders"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/savedadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Address"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

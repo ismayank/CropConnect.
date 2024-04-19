@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "231782722438",
+    "project_id": "mayank-cd74a",
+    "storage_bucket": "mayank-cd74a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231782722438:android:bda8f71030f5a83a82da07",
+        "android_client_info": {
+          "package_name": "com.example.mayank"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtY1-VS3pbYw5wzBZPsJs5a9RCJxtN-oY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

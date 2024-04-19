@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mayank"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.ProfileSetting"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Historyorder"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SellCartActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Sellerpayment"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SellerCheckout"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SellerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OrderSuccess"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Checkout"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ListHarvest"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SellerDash"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.sellerLogin"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SellerReg"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.RegisterPage"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.LoginPage"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SecondPage"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.FirstPage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

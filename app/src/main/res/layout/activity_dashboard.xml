@@ -1,0 +1,266 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blury_background"
+    android:theme="@style/NoActionBar"
+    tools:context=".Activity.Dashboard">
+
+    <!-- Dashboard Header -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="40dp">
+
+        <!-- Dashboard Title -->
+        <TextView
+            android:id="@+id/dashboardTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="3dp"
+            android:text="Dashboard"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/g_black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <!-- Logout Button -->
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_background"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Logout"
+            android:onClick="logoutmain"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <!-- Main Content Area -->
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- User Details Section -->
+        <TextView
+            android:id="@+id/userDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/h3"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="User Details"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <!-- User Profile Image -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dp" />
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/usernameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Mayank Singh"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- User Address -->
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Udupi, Manipal"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+        <!-- Other Options Section -->
+        <TextView
+            android:id="@+id/trackdash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:onClick="checkHistory"
+            android:text="Your Orders"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Profile Settings"
+            android:textColor="#000000"
+            android:onClick="settings"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Notifications"
+            android:onClick="notifications"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- FAQ Section -->
+            <TextView
+                android:id="@+id/faqTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Frequently Asked Questions"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:onClick="toggleFaqSection" />
+
+            <!-- FAQ Expansion Button -->
+            <ImageView
+                android:id="@+id/expandFaqButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_arrow_down"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:onClick="toggleFaqSection" />
+        </LinearLayout>
+
+
+
+        <!-- FAQ Content Layout -->
+        <LinearLayout
+            android:id="@+id/faqContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- FAQ Items go here -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/h3"
+                android:text="How to place an order?"
+                android:fontFamily="@font/poppins_light"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginBottom="4dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/h3"
+                android:text="How to track an order?"
+                android:fontFamily="@font/poppins_light"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginBottom="4dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/h3"
+                android:text="Why i Chose Engineering?"
+                android:fontFamily="@font/poppins_light"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginBottom="4dp" />
+            <!-- Add more FAQ items as needed -->
+        </LinearLayout>
+        <!-- Contact Us TextView -->
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Contact Us"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:onClick="toggleContactOptions" />
+
+        <!-- Layout to hold the contact options -->
+        <LinearLayout
+            android:id="@+id/contactOptionsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"> <!-- Initially hidden -->
+
+            <!-- Option 1: Phone number -->
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                style="@style/h3"
+                android:text="Phone: +91 7979055623"
+                android:paddingTop="8dp"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <!-- Option 2: Email address -->
+            <TextView
+                android:id="@+id/emailAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                style="@style/h3"
+                android:text="Email: mayank@anushka.com"
+                android:paddingTop="8dp"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            style="@style/h3"
+            android:layout_marginTop="140dp"
+            android:layout_gravity="center"
+            android:text="Made with Love In MIT"
+            android:paddingTop="8dp"
+
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

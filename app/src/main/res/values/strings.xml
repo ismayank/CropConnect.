@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Mayank</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="harvest">Where The Harvest\n Meets\n The Hunger</string>
+    <string name="qulity">\Bridge the gap between farm and table,\n where farmers sell\n and users enable.</string>
+    <string name="browse_market">Browse Market</string>
+    <string name="list_harvest">List Harvest</string>
+    <string name="cropconnect">CropConnect.</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+</resources>
